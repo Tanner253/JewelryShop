@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Account\" />
-    <Folder Include="Views\Shop\" />
     <Folder Include="wwwroot\Assets\" />
   </ItemGroup>
 
