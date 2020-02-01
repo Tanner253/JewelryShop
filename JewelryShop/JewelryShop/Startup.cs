@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using JewelryShop.Data;
 using JewelryShop.Models;
+using JewelryShop.Models.Interfaces;
+using JewelryShop.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -54,13 +56,13 @@ namespace JewelryShop
 
 
             services.AddDbContext<ShopDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ProductionConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
             services.AddDbContext<UserDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("UserDataConnection")));
+           options.UseSqlServer(Configuration.GetConnectionString("IdentityDefault")));
 
-            //services.AddScoped<IDinoManager, DinoService>();
+            services.AddScoped<IJewelry, JewelryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
