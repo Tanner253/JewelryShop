@@ -9,7 +9,7 @@ namespace JewelryShop.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public bool InStock { get; set; }
+        public string InStock { get; set; }
         public string Description { get; set; }
         public string Picture1 { get; set; }
         public string Picture2 { get; set; }
