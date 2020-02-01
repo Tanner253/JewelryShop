@@ -34,19 +34,20 @@
             @Html.DisplayNameFor(model => model.JewelryItem.Picture1)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.JewelryItem.Picture1)
+            <img src="@Model.JewelryItem.Picture1" alt="@Model.JewelryItem.Description" />
+         
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.JewelryItem.Picture2)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.JewelryItem.Picture2)
+            <img src="@Model.JewelryItem.Picture2" alt="@Model.JewelryItem.Description" />
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.JewelryItem.Picture3)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.JewelryItem.Picture3)
+            <img src="@Model.JewelryItem.Picture3" alt="@Model.JewelryItem.Description" />
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.JewelryItem.Price)

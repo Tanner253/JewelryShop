@@ -22,9 +22,10 @@ namespace JewelryShop.Data
                     Name = "Blue Earring Set",
                     Description = "Expertly hand crafted earrings perfect for a night out",
                     InStock = "Yes - Limited",
-                    Picture1 = "~/wwwroot/Assets/Set1.1.jpg",
-                    Picture2 = "~/wwwroot/Assets/Set1.2.jpg",
-                    Picture3 = "~/wwwroot/Assets/Set1.3.jpg"
+                    Picture1 = "~/Assets/Set1.1.jpg",
+                    Picture2 = "~/Assets/Set1.2.jpg",
+                    Picture3 = "~/Assets/Set1.3.jpg",
+                    Price = "50$"
 
 
                 }

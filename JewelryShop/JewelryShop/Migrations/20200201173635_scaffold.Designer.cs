@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace JewelryShop.Migrations.ShopDb
+namespace JewelryShop.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20200201003048_init")]
-    partial class init
+    [Migration("20200201173635_scaffold")]
+    partial class scaffold
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,23 +26,41 @@ namespace JewelryShop.Migrations.ShopDb
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<bool>("InStock");
+                    b.Property<string>("InStock")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("Picture1");
+                    b.Property<string>("Picture1")
+                        .IsRequired();
 
                     b.Property<string>("Picture2");
 
                     b.Property<string>("Picture3");
 
-                    b.Property<string>("Price");
+                    b.Property<string>("Price")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
                     b.ToTable("JewelryItem");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Description = "Expertly hand crafted earrings perfect for a night out",
+                            InStock = "Yes - Limited",
+                            Name = "Blue Earring Set",
+                            Picture1 = "~/Assets/Set1.1.jpg",
+                            Picture2 = "~/Assets/Set1.2.jpg",
+                            Picture3 = "~/Assets/Set1.3.jpg",
+                            Price = "50$"
+                        });
                 });
 #pragma warning restore 612, 618
         }

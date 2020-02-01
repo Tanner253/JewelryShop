@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace JewelryShop.Migrations.ShopDb
+namespace JewelryShop.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
     partial class ShopDbContextModelSnapshot : ModelSnapshot
@@ -24,19 +24,24 @@ namespace JewelryShop.Migrations.ShopDb
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<string>("InStock");
+                    b.Property<string>("InStock")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("Picture1");
+                    b.Property<string>("Picture1")
+                        .IsRequired();
 
                     b.Property<string>("Picture2");
 
                     b.Property<string>("Picture3");
 
-                    b.Property<string>("Price");
+                    b.Property<string>("Price")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -49,9 +54,10 @@ namespace JewelryShop.Migrations.ShopDb
                             Description = "Expertly hand crafted earrings perfect for a night out",
                             InStock = "Yes - Limited",
                             Name = "Blue Earring Set",
-                            Picture1 = "~/wwwroot/Assets/Set1.1.jpg",
-                            Picture2 = "~/wwwroot/Assets/Set1.2.jpg",
-                            Picture3 = "~/wwwroot/Assets/Set1.3.jpg"
+                            Picture1 = "~/Assets/Set1.1.jpg",
+                            Picture2 = "~/Assets/Set1.2.jpg",
+                            Picture3 = "~/Assets/Set1.3.jpg",
+                            Price = "50$"
                         });
                 });
 #pragma warning restore 612, 618
